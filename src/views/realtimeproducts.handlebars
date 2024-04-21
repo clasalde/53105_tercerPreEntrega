@@ -1,0 +1,170 @@
+<div class="formView d-flex flex-column justify-content-center">
+  <h1>ABM Producto Online</h1>
+  <div class="container-flex bootstrap snippets bootdey">
+    <section id="contact" class="gray-bg padding-top-bottom">
+      <div class="container bootstrap snippets bootdey">
+        <div class="column">
+          <form id="Highlighted-form" class="col-sm-6 col-sm-offset-3 m-auto">
+
+            <div class="d-flex gap-5 justify-content-center">
+              <div class="col-sm-6 col-sm-offset-3 m-auto">
+                <div class="form-group">
+                  <label class="control-label" for="title">Título</label>
+                  <div class="controls">
+                    <input
+                      type="text"
+                      id="title"
+                      placeholder="Título"
+                      class="form-control requiredField Highlighted-label"
+                      data-new-placeholder="Título"
+                      data-error-empty="Por favor ingresá el título"
+                    />
+                    <i class="fa fa-info"></i>
+                  </div>
+                </div><!-- End titulo input -->
+
+                <div class="form-group">
+                  <label
+                    class="control-label"
+                    for="description"
+                  >Descripción</label>
+                  <div class="controls">
+                    <input
+                      type="text"
+                      id="description"
+                      placeholder="Descripción"
+                      class="form-control requiredField Highlighted-label"
+                      data-new-placeholder="Descripción"
+                      data-error-empty="Por favor ingresá una descripción del producto"
+                    />
+                    <i class="fa fa-info"></i>
+                  </div>
+                </div><!-- End description input -->
+
+                <div class="form-group">
+                  <label class="control-label" for="price">Precio</label>
+                  <div class="controls">
+                    <input
+                      type="number"
+                      id="price"
+                      placeholder="Precio"
+                      class="form-control requiredField Highlighted-label"
+                      data-new-placeholder="Precio"
+                      data-error-empty="Por favor ingresá el precio"
+                    />
+                    <i class="fa fa-money"></i>
+                  </div>
+                </div><!-- End precio input -->
+
+                <div class="form-group">
+                  <label class="control-label" for="img">Imagen</label>
+                  <div class="controls">
+                    <input
+                      type="text"
+                      id="img"
+                      placeholder="Ruta de Imagen"
+                      class="form-control requiredField Highlighted-label"
+                      data-new-placeholder="Ruta de Imagen"
+                      data-error-empty="Por favor ingresá una ruta de imagen"
+                      data-error-invalid="Ruta inválida"
+                    />
+                    <i class="fa fa-picture-o"></i>
+                  </div>
+                </div><!-- End image input -->
+              </div>
+              <div class="col-sm-6 col-sm-offset-3 m-auto">
+                <div class="form-group">
+                  <label class="control-label" for="code">Código</label>
+                  <div class="controls">
+                    <input
+                      type="text"
+                      id="code"
+                      placeholder="Código"
+                      class="form-control requiredField Highlighted-label"
+                      data-new-placeholder="Código"
+                      data-error-empty="Por favor ingresá un código de producto"
+                    />
+                    <i class="fa fa-barcode"></i>
+                  </div>
+                </div><!-- End codigo input -->
+
+                <div class="form-group">
+                  <label class="control-label" for="stock">Stock</label>
+                  <div class="controls">
+                    <input
+                      type="number"
+                      id="stock"
+                      placeholder="Stock"
+                      class="form-control requiredField Highlighted-label"
+                      data-new-placeholder="Stock"
+                      data-error-empty="Por favor ingresá la cantidad en stock del artículo"
+                    />
+                    <i class="fa fa-signal"></i>
+                  </div>
+                </div><!-- End stock input -->
+
+                <div class="form-group">
+                  <label class="control-label" for="age">Categoría</label>
+                  <div class="controls">
+                    <input
+                      type="text"
+                      id="category"
+                      placeholder="Categoría"
+                      class="form-control requiredField Highlighted-label"
+                      data-new-placeholder="Categoría"
+                      data-error-empty="Por favor ingresá la categoría de producto"
+                    />
+                    <i class="fa fa-arrows"></i>
+                  </div>
+                </div><!-- End categoria input -->
+
+                <div class="form-group">
+                  <label class="control-label" for="status">Estado</label>
+                  <div class="controls">
+                    <input
+                      type="text"
+                      id="status"
+                      placeholder="Estado"
+                      class="form-control requiredField Highlighted-label"
+                      data-new-placeholder="Estado"
+                      data-error-empty="Por favor ingresá el estado del producto (Activo / Inactivo)"
+                    />
+                    <i class="fa fa-power-off"></i>
+                  </div>
+                </div><!-- End estado input -->
+              </div>
+            </div>
+          </form><!-- End Highlighted-form -->
+
+          <button
+            type="button"
+            id="btnEnviar"
+            class="col-sm-4 col-sm-offset-3 d-flex justify-content-center mt-5 m-auto btn btn-primary"
+          >Confirmar</button>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+
+{{! <form>
+    <input type="text" id="title" placeholder="Titulo">
+    <input type="text" id="description" placeholder="Descripcion">
+    <input type="number" id="price" placeholder="Precio">
+    <input type="text" id="img" value="Sin Imagen">
+    <input type="text" id="code" placeholder="Código">
+    <input type="number" id="stock" placeholder="Stock">
+    <input type="text" id="category" placeholder="Categoria">
+    <select id="status">
+        <option value="true"> Activo </option>
+        <option value="false"> Inactivo </option>
+    </select>
+    <button type="button" id="btnEnviar"> Enviar </button>
+</form> }}
+
+<script src="https://cdn.socket.io/4.7.4/socket.io.min.js"></script>
+<script src="js/realtime.js"></script>
+<br><br>
+<h1>Productos a la Venta</h1>
+<br>
+<div id="contenedorProductos" class="d-flex gap-3"></div>

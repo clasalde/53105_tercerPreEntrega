@@ -1,0 +1,27 @@
+<div class="formView d-flex flex-column justify-content-center">
+  <h1>Mi perfil</h1>
+  <div class="text-center">
+    <h3>Bienvenido, {{user.nombre}} {{user.apellido}}!</h3>
+    <h3>Rol: {{user.role}}</h3>
+  </div>
+
+  <form
+    action="/api/users/logout"
+    method="POST"
+    id="Highlighted-form"
+    novalidate=""
+    class="text-center"
+  >
+    <button
+      type="submit"
+      class="btn btn-danger mt-3 d-flex m-auto"
+    >Logout</button>
+
+    {{#if this.isAdmin}}
+      <a href="/realtimeproducts" class="btn btn-secondary mt-3 m-auto">Modificar Productos</a>
+    {{else}}
+      <a href="/chat" class="btn btn-secondary mt-3 text-center">Chateá con nuestra comunidad</a>
+      <a href="/products" class="btn btn-secondary mt-3 text-center">Tienda</a>
+    {{/if}}
+  </form>
+</div>

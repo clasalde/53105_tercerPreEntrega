@@ -1,0 +1,70 @@
+{{! <form class="formulario" action="/api/users/login" method="POST">
+    <label for="email">Email:</label>
+    <input type="email" class="inputMessi" id="email" name="email" required>
+    
+    <label for="password">Contraseña:</label>
+    <input type="password" class="inputMessi" id="password" name="password" required>
+    
+    <button type="submit" class="btnMios">Login</button>
+    
+</form> }}
+
+<div class="formView d-flex flex-column justify-content-center">
+<h1>Inicio de Sesión </h1>
+  <div class="container-flex bootstrap snippets bootdey">
+    <section id="contact" class="gray-bg padding-top-bottom">
+      <div class="container bootstrap snippets bootdey">
+        <div class="row">
+          <form
+            action="/api/users/login"
+            method="POST"
+            id="Highlighted-form"
+            class="col-sm-6 col-sm-offset-3 m-auto"
+            novalidate=""
+          >
+
+            <div class="form-group">
+              <label class="control-label" for="email">Email</label>
+              <div class="controls">
+                <input
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="Email"
+                  class="form-control requiredField Highlighted-label"
+                  data-new-placeholder="Tu email"
+                  type="email"
+                  data-error-empty="Por favor ingresá tu email"
+                />
+                <i class="fa fa-envelope"></i>
+              </div>
+            </div><!-- End email input -->
+
+            <div class="form-group">
+              <label class="control-label" for="password">Password</label>
+              <div class="controls">
+                <input
+                  id="password"
+                  name="password"
+                  placeholder="Password"
+                  class="form-control requiredField Highlighted-label"
+                  data-new-placeholder="Password"
+                  type="password"
+                  data-error-empty="Por favor ingresá tu password"
+                  data-error-invalid="Password inválida"
+                />
+                <i class="fa fa-key"></i>
+              </div>
+            </div><!-- End password input -->
+            <button
+              name="submit"
+              type="submit"
+              class="btn btn-primary mt-5 d-flex m-auto"
+            >Ingresar</button>
+            <input type="hidden" name="submitted" id="submitted" value="true" />
+          </form><!-- End Highlighted-form -->
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

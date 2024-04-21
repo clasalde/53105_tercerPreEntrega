@@ -1,0 +1,44 @@
+<div class="d-flex flex-column align-items-center">
+<h1 class="text-center">Carrito de Compras</h1>
+<h3 class="text-center mt-2">Total: ${{totalCompra}}</h3>
+<button onclick="vaciarCarrito('{{cartId}}')" class="btn btn-danger">Vaciar Carrito</button>
+</div>
+
+<br><br>
+
+
+<div class="container d-flex flex-wrap gap-3">
+  {{#each productos}}
+    <div class="card d-flex flex-column justify-content-around" style="width: 18rem;">
+      <img src="{{this.product.img}}" class="card-img-top"></img>
+      <div class="card-body d-flex flex-column justify-content-center">
+        <h3 class="card-title">{{this.product.title}}</h3>
+        <p class="card-text">Cantidad: {{this.quantity}}</p>
+        <p class="card-text">Precio: $ {{this.product.totalPrice}}</p>
+        <button
+          onclick="eliminarProducto('{{this.cartId}}', '{{this.product._id}}')"
+          class="btn btn-danger"
+        >Eliminar</button>
+      </div>
+    </div>
+  {{/each}}
+</div>
+<br><br>
+
+
+
+
+{{! ver de tomar las formulas desde el controller}}
+{{! Organizar en un módulo en PUBLIC/JS }}
+
+<script>
+  function eliminarProducto(cartId, productId) {
+  fetch(`/api/carts/${cartId}/product/${productId}`, { method: 'DELETE' })
+  .then(response => { if (!response.ok) { throw new Error('Error al eliminar el producto del carrito'); } location.reload(); }) .catch(error => {
+  console.error('Error:', error); }); } 
+  
+  function vaciarCarrito(cartId) {
+  fetch(`/api/carts/${cartId}`, { method: 'DELETE' }) .then(response => { if
+  (!response.ok) { throw new Error('Error al vaciar el carrito'); }
+  location.reload(); }) .catch(error => { console.error('Error:', error); }); }
+</script>

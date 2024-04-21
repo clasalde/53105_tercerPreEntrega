@@ -1,0 +1,112 @@
+<div class="formView d-flex flex-column justify-content-center">
+  <h1>Nuevo Usuario</h1>
+  <div class="container-flex bootstrap snippets bootdey">
+    <section id="contact" class="gray-bg padding-top-bottom">
+      <div class="container bootstrap snippets bootdey">
+        <div class="row">
+          <form
+            action="/api/users/register"
+            method="POST"
+            id="Highlighted-form"
+            class="col-sm-6 col-sm-offset-3 m-auto"
+            novalidate=""
+          >
+
+            <div class="form-group">
+              <label class="control-label" for="first_name">Nombre</label>
+              <div class="controls">
+                <input
+                  id="first_name"
+                  name="first_name"
+                  required
+                  placeholder="Nombre"
+                  class="form-control requiredField Highlighted-label"
+                  data-new-placeholder="Nombre"
+                  type="text"
+                  data-error-empty="Por favor ingresá tu nombre"
+                />
+                <i class="fa fa-user"></i>
+              </div>
+            </div><!-- End nombre input -->
+
+            <div class="form-group">
+              <label class="control-label" for="last_name">Apellido</label>
+              <div class="controls">
+                <input
+                  id="last_name"
+                  name="last_name"
+                  required
+                  placeholder="Apellido"
+                  class="form-control requiredField Highlighted-label"
+                  data-new-placeholder="Apellido"
+                  type="text"
+                  data-error-empty="Por favor ingresá tu apellido"
+                />
+                <i class="fa fa-user"></i>
+              </div>
+            </div><!-- End apellido input -->
+
+            <div class="form-group">
+              <label class="control-label" for="email">Email</label>
+              <div class="controls">
+                <input
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="Email"
+                  class="form-control requiredField Highlighted-label"
+                  data-new-placeholder="Email"
+                  type="email"
+                  data-error-empty="Por favor ingresá tu email"
+                />
+                <i class="fa fa-envelope"></i>
+              </div>
+            </div><!-- End email input -->
+
+            <div class="form-group">
+              <label class="control-label" for="password">Password</label>
+              <div class="controls">
+                <input
+                  id="password"
+                  name="password"
+                  required
+                  placeholder="Password"
+                  class="form-control requiredField Highlighted-label"
+                  data-new-placeholder="Password"
+                  type="password"
+                  data-error-empty="Por favor ingresá tu password"
+                  data-error-invalid="Password inválida"
+                />
+                <i class="fa fa-key"></i>
+              </div>
+            </div><!-- End password input -->
+
+            <div class="form-group">
+              <label class="control-label" for="age">Edad</label>
+              <div class="controls">
+                <input
+                  id="age"
+                  name="age"
+                  required
+                  placeholder="Edad"
+                  class="form-control requiredField Highlighted-label"
+                  data-new-placeholder="Edad"
+                  type="number"
+                  data-error-empty="Por favor ingresá tu edad"
+                />
+                <i class="fa fa-user"></i>
+              </div>
+            </div><!-- End edad input -->
+
+            <button
+              name="submit"
+              type="submit"
+              class="btn btn-primary mt-5 d-flex m-auto"
+            >Registrarme</button>
+            <input type="hidden" name="submitted" id="submitted" value="true" />
+          </form><!-- End Highlighted-form -->
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
